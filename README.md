@@ -16,13 +16,21 @@ Webget is trying to replace telnet(-R/telnet) by grouping a set of comands to be
 After download from the link below and compile it, execute like:
 
 shell> ./webget 
+
 Usage: ./webget SOME_KIND_URL
+
 e.g.
 
 ./webget /servicelist.jsp 
+
 or 
+
 ./webget http://wap.ufqi.com/servicelist.jsp 
+
 or 
+
 ./webget wap.ufqi.com/servicelist.jsp 
+
 or 
+
 ./webget 172.24.100.4/servicelist.jsp 
