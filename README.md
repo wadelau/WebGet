@@ -8,7 +8,7 @@ In coding or programming for web and networking, developers are compelled to deb
 
 By: Zhenxing Liu, Wade lau
 
-It features include support for HTTP/1.1, HTTPS and defined User-Agent, and so on. 
+It features include support for HTTP/1.1, HTTPS and self-defined User-Agent, and so on. 
 However webget is not designed to do something which wget(-R/wget) could do in some environments. 
 Webget is trying to replace telnet(-R/telnet) by grouping a set of comands to be sent from a client to a server. 
 
