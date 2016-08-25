@@ -19,10 +19,11 @@ use POSIX qw(strftime);
 my $ver = 6.1;
 
 if (@ARGV < 1) { 
-	print " Usage: webget /servicelist.jsp \n or \n";
-	print " Usage: webget http://wap.ufqi.com/servicelist.jsp \n or \n";
-	print " Usage: webget wap.ufqi.com/servicelist.jsp \n or \n";
-	print " Usage: webget 172.24.100.4/servicelist.jsp \n ";
+	print "Usage: \n\n webget /servicelist.jsp \n  \n";
+	print " webget http://wap.ufqi.com/servicelist.jsp \n  \n";
+	print " webget wap.ufqi.com/servicelist.jsp \n  \n";
+	print " webget \"http://172.24.100.4/servicelist.jsp?a=1&b=2\" \n \n";
+	print "Version: $ver\n";
 	exit ;
 	#die "usage: $0 document ..." 
 }
