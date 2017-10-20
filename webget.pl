@@ -17,7 +17,7 @@ use IO::Socket::SSL;
 use IO::Socket::Timeout;
 use POSIX qw(strftime);
 
-my $ver = 6.1;
+my $ver = 6.2;
 
 if (@ARGV < 1) { 
 	print "Usage: \n\n webget /servicelist.jsp \n  \n";
