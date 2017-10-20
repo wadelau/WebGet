@@ -14,6 +14,7 @@ use IO::Socket;
 use IO::Socket::INET;
 use IO::Socket::INET6;
 use IO::Socket::SSL;
+use IO::Socket::Timeout;
 use POSIX qw(strftime);
 
 my $ver = 6.1;
@@ -89,7 +90,10 @@ foreach $document ( @ARGV ){ # need remedy for multiple requests
 			Timeout	=> $time_out,
 		);
 	}
-
+	IO::Socket::Timeout->enable_timeouts_on($remote);
+        $remote->timeout($timeout);
+        $remote->read_timeout($timeout);
+	
 	unless ($remote) { die "cannot connect to http daemon on $host ." }
 	$remote->autoflush(1);
 	$time_bgn = time();
