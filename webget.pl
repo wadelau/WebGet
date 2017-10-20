@@ -67,6 +67,7 @@ my $document = "";
 my $line = "";
 my $time_bgn = 0;
 my $time_end = 0;
+my $time_out = 3 * 60; # seconds
 foreach $document ( @ARGV ){ # need remedy for multiple requests
 	my $remote = undef;
 	
@@ -78,12 +79,14 @@ foreach $document ( @ARGV ){ # need remedy for multiple requests
 			SSL_verify_mode => SSL_VERIFY_NONE, 
 			IO::Socket::SSL::default_ca(),
 			SSL_verifycn_scheme => 'http',
+			Timeout	=> $time_out,
 		) or die ($SSL_ERROR);
 	}
 	elsif( 1 ){
 		$remote = IO::Socket::INET->new( Proto     => "tcp",
 			PeerHost  => $host,
 			PeerPort  => $port,
+			Timeout	=> $time_out,
 		);
 	}
 
