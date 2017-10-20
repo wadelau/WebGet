@@ -91,8 +91,8 @@ foreach $document ( @ARGV ){ # need remedy for multiple requests
 		);
 	}
 	IO::Socket::Timeout->enable_timeouts_on($remote);
-        $remote->timeout($timeout);
-        $remote->read_timeout($timeout);
+        $remote->timeout($time_out);
+        $remote->read_timeout($time_out);
 	
 	unless ($remote) { die "cannot connect to http daemon on $host ." }
 	$remote->autoflush(1);
